@@ -85,3 +85,31 @@ footer {
     padding: 10px;
     margin-top: 20px;
 }
+/* ✅ Mobile Optimization */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* Adjust text size */
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column; /* Stack menu vertically */
+        align-items: center;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin-bottom: 10px; /* Add spacing between menu items */
+    }
+
+    .container {
+        width: 90%; /* Make the layout fit mobile screens */
+        margin: auto;
+    }
+
+    .featured img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
