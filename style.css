@@ -126,5 +126,21 @@ footer {
         width: 100%;
     }
 }
+/* 📌 Explore Categories Button Styling */
+.category-button {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: #ddd;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.category-button:hover {
+    background-color: #bbb;
+}
+
 
 
