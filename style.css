@@ -88,28 +88,43 @@ footer {
 /* ✅ Mobile Optimization */
 @media (max-width: 768px) {
     body {
-        font-size: 16px; /* Adjust text size */
+        font-size: 16px;
     }
 
     nav ul {
         display: flex;
-        flex-direction: column; /* Stack menu vertically */
+        flex-direction: column;
         align-items: center;
         padding: 0;
     }
 
     nav ul li {
-        margin-bottom: 10px; /* Add spacing between menu items */
+        margin: 10px 0;
     }
 
     .container {
-        width: 90%; /* Make the layout fit mobile screens */
+        width: 90%;
         margin: auto;
     }
 
-    .featured img {
+    .featured img, 
+    .review img {
         max-width: 100%;
         height: auto;
     }
+
+    header h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    article {
+        width: 100%;
+    }
 }
+
 
