@@ -1,25 +1,29 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Sidebar Toggle
-    const menuToggle = document.querySelector(".menu-toggle");
-    const sidebar = document.querySelector(".sidebar");
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
 
-    menuToggle.addEventListener("click", function () {
-        sidebar.style.left = sidebar.style.left === "0px" ? "-250px" : "0px";
-    });
+    <header>
+        <a href="../index.html" class="back-button">← Home</a>
+        <h1>Blog</h1>
+    </header>
 
-    // Search Functionality
-    document.getElementById("search-bar").addEventListener("keyup", function () {
-        let query = this.value.toLowerCase();
-        let pages = document.querySelectorAll("nav.sidebar ul li");
+    <main>
+        <article>
+            <h2>Mastering Cinematography</h2>
+            <p>Discover the secrets behind cinematic visuals and perfect lighting...</p>
+        </article>
 
-        pages.forEach(function (page) {
-            let text = page.textContent.toLowerCase();
-            if (text.includes(query)) {
-                page.style.display = "block";
-            } else {
-                page.style.display = "none";
-            }
-        });
-    });
-});
+        <article>
+            <h2>Secrets of Scriptwriting</h2>
+            <p>How to write engaging stories and create unforgettable characters...</p>
+        </article>
+    </main>
 
+</body>
+</html>
