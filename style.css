@@ -1,16 +1,71 @@
+/* ✅ General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* ✅ Header */
+header {
+    background: #222;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* ✅ Navigation Bar */
+nav {
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Aligns items properly */
+    padding: 10px 20px;
+    position: relative;
+}
+
 /* ✅ Move Menu Button to Left */
 .menu-toggle {
     display: block;
     background: #333;
     color: white;
     padding: 10px;
-    text-align: left;  /* Align to left */
+    text-align: left; /* Align text to the left */
     cursor: pointer;
-    width: 100%;
+    border: none;
 }
 
-/* ✅ Show Menu on Mobile */
+/* ✅ Desktop Menu */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* ✅ Mobile Styles */
 @media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start; /* Aligns items to the left */
+    }
+
+    .menu-toggle {
+        width: 100%;
+        text-align: left;
+    }
+
     nav ul {
         display: none;
         flex-direction: column;
@@ -20,9 +75,31 @@
         top: 50px;
         left: 0;
         z-index: 1000;
+        transition: all 0.3s ease-in-out;
     }
 
     nav ul.show {
         display: flex;
     }
+
+    nav ul li {
+        text-align: left;
+        width: 100%;
+        padding: 10px;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px;
+        width: 100%;
+    }
+}
+
+/* ✅ Footer */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
 }
