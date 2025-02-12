@@ -9,31 +9,31 @@
 <body>
 
 <header>
-    <!-- ✅ Menu Button -->
+    <!-- ✅ Menu Button (Left) -->
     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
-    <!-- ✅ Logo -->
-    <div class="logo">🎬 <span class="short-logo">CVSL</span></div>
-
-    <!-- ✅ Search Bar -->
-    <div class="search-container">
-        <input type="text" id="search-box" placeholder="Search...">
-        <button class="search-btn">🔍</button>
-    </div>
 
     <!-- ✅ Navigation Menu -->
     <nav>
         <ul id="menu">
-            <li><a href="blog.html" onclick="closeMenu()">Blog</a></li>
-            <li><a href="cinematography.html" onclick="closeMenu()">Cinematography</a></li>
-            <li><a href="direction.html" onclick="closeMenu()">Direction</a></li>
-            <li><a href="scriptwriting.html" onclick="closeMenu()">Scriptwriting</a></li>
-            <li><a href="story.html" onclick="closeMenu()">Story</a></li>
-            <li><a href="editing.html" onclick="closeMenu()">Editing</a></li>
-            <li><a href="cinema-lighting.html" onclick="closeMenu()">Cinema Lighting</a></li>
-            <li><a href="oscar-winning.html" onclick="closeMenu()">Oscar Winners</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="cinematography.html">Cinematography</a></li>
+            <li><a href="direction.html">Direction</a></li>
+            <li><a href="scriptwriting.html">Scriptwriting</a></li>
+            <li><a href="story.html">Story</a></li>
+            <li><a href="editing.html">Editing</a></li>
+            <li><a href="cinema-lighting.html">Cinema Lighting</a></li>
+            <li><a href="oscar-winning.html">Oscar Winners</a></li>
         </ul>
     </nav>
+
+    <!-- ✅ Search Bar (Centered) -->
+    <div class="search-container">
+        <input type="text" id="search" placeholder="Search..." onkeyup="searchPosts()">
+        <button class="search-btn" onclick="searchPosts()">🔍</button>
+    </div>
+
+    <!-- ✅ Logo (Right) -->
+    <div class="logo">🎬 <span class="short-logo">CVSL</span></div>
 </header>
 
 <main>
@@ -41,23 +41,30 @@
         <h2>Welcome to CineVerse Story Lab</h2>
         <p>Your ultimate guide to the art of filmmaking, scriptwriting, cinematography, and more.</p>
     </section>
+
+    <!-- ✅ Blog Section (Searchable) -->
+    <section class="blog">
+        <article>
+            <h3>Mastering Cinematography</h3>
+            <p>Learn about shot composition, lighting, and storytelling.</p>
+        </article>
+
+        <article>
+            <h3>Scriptwriting Essentials</h3>
+            <p>Understand the three-act structure and how to create compelling characters.</p>
+        </article>
+
+        <article>
+            <h3>Director’s Vision</h3>
+            <p>How directors shape movies through unique storytelling techniques.</p>
+        </article>
+    </section>
 </main>
 
 <footer>
     <p>© 2025 CineVerse Story Lab | All Rights Reserved</p>
 </footer>
 
-<script>
-    function toggleMenu() {
-        var menu = document.getElementById("menu");
-        menu.classList.toggle("show");
-    }
-
-    function closeMenu() {
-        var menu = document.getElementById("menu");
-        menu.classList.remove("show");
-    }
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
