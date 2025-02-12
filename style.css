@@ -64,6 +64,32 @@ nav ul li a:hover {
     color: #ff4d6d;
 }
 
+/* ✅ Search Bar (Centered) */
+.search-container {
+    display: flex;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+#search-box {
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 14px;
+    background: transparent;
+    width: 150px;
+}
+
+.search-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 16px;
+}
+
 /* ✅ Logo (Right) */
 .logo {
     font-size: 22px;
@@ -84,7 +110,7 @@ nav ul li a:hover {
 @media (max-width: 768px) {
     /* Make header more compact */
     header {
-        flex-direction: row;
+        flex-wrap: wrap;
         justify-content: space-between;
     }
 
@@ -113,7 +139,3 @@ nav ul li a:hover {
     }
 
     nav ul li {
-        width: 100%;
-        padding: 10px 0;
-    }
-}
