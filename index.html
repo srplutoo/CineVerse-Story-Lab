@@ -3,32 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cineverse Story Lab</title>
+    <title>CVSL - CineVerse Story Lab</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <span id="menu-toggle">☰</span> <!-- Menu Toggle Button -->
-    <div class="logo">CVSL</div>
-</header>
+    <header>
+        <nav>
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pages/cinematography.html">Cinematography</a></li>
+                <li><a href="pages/scriptwriting.html">Scriptwriting</a></li>
+                <li><a href="pages/direction.html">Direction</a></li>
+                <li><a href="pages/editing.html">Editing</a></li>
+                <li><a href="pages/movies.html">Movies</a></li>
+            </ul>
+            <div class="logo">CVSL</div>
+        </nav>
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Search...">
+            <button onclick="searchContent()">🔍</button>
+        </div>
+    </header>
 
-<nav id="menu" class="menu">
-    <a href="index.html">Home</a>
-    <a href="pages/cinematography.html">Cinematography</a>
-    <a href="pages/scriptwriting.html">Scriptwriting</a>
-    <a href="pages/direction.html">Direction</a>
-    <a href="pages/editing.html">Editing</a>
-    <a href="pages/movies.html">Movies</a>
-    <a href="pages/blog.html">Blog</a>
-</nav>
+    <main>
+        <section id="home-content">
+            <h1>Welcome to CineVerse Story Lab</h1>
+            <p>Your go-to place for filmmaking insights!</p>
+        </section>
 
-<main>
-    <h1>Welcome to Cineverse Story Lab</h1>
-    <input type="text" id="search-bar" placeholder="Search...">
-    <p>Explore the art of filmmaking...</p>
-</main>
+        <section id="blog-section">
+            <h2>Latest Blogs</h2>
+            <div id="blog-container"></div>
+            <button onclick="addNewBlog()">Add New Blog</button>
+        </section>
+    </main>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
