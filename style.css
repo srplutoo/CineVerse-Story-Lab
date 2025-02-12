@@ -21,7 +21,8 @@ header {
     align-items: center;
     justify-content: space-between;
     border-bottom: 2px solid #ddd;
-    gap: 20px; /* Add spacing */
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 /* ✅ Menu Button (Left) */
@@ -73,7 +74,7 @@ nav ul li a:hover {
     padding: 5px 10px;
     border-radius: 20px;
     border: 1px solid #ccc;
-    margin: 0 20px;
+    flex-shrink: 0;
 }
 
 #search-box {
