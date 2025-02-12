@@ -34,7 +34,7 @@ header {
     display: none;
 }
 
-/* ✅ Navigation Menu (Centered) */
+/* ✅ Navigation Menu */
 nav {
     flex: 1;
     display: flex;
@@ -72,6 +72,7 @@ nav ul li a:hover {
     padding: 5px 10px;
     border-radius: 20px;
     border: 1px solid #ccc;
+    margin: 0 20px; /* Added space */
 }
 
 #search-box {
@@ -80,7 +81,7 @@ nav ul li a:hover {
     padding: 5px;
     font-size: 14px;
     background: transparent;
-    width: 150px;
+    width: 180px; /* Adjusted width */
 }
 
 .search-btn {
@@ -108,10 +109,11 @@ nav ul li a:hover {
 
 /* ✅ Mobile-Friendly Menu */
 @media (max-width: 768px) {
-    /* Make header more compact */
+    /* Stack elements properly */
     header {
         flex-wrap: wrap;
         justify-content: space-between;
+        padding: 10px;
     }
 
     /* Show Menu Button */
@@ -139,3 +141,18 @@ nav ul li a:hover {
     }
 
     nav ul li {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    /* Adjust search bar for mobile */
+    .search-container {
+        width: 100%;
+        margin: 10px 0;
+        justify-content: center;
+    }
+
+    #search-box {
+        width: 80%;
+    }
+}
