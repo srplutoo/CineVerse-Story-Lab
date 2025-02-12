@@ -8,63 +8,43 @@
 </head>
 <body>
 
-<header>
-    <!-- ✅ Menu Button (Left) -->
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <!-- ✅ Navigation Bar -->
+    <header>
+        <h1>CineVerse Story Lab</h1>
+        <nav>
+            <ul id="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Scriptwriting</a></li>
+                <li><a href="#">Cinematography</a></li>
+                <li><a href="#">Direction</a></li>
+                <li><a href="#">Editing</a></li>
+            </ul>
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        </nav>
+    </header>
 
-    <!-- ✅ Navigation Menu -->
-    <nav>
-        <ul id="menu">
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="cinematography.html">Cinematography</a></li>
-            <li><a href="direction.html">Direction</a></li>
-            <li><a href="scriptwriting.html">Scriptwriting</a></li>
-            <li><a href="story.html">Story</a></li>
-            <li><a href="editing.html">Editing</a></li>
-            <li><a href="cinema-lighting.html">Cinema Lighting</a></li>
-            <li><a href="oscar-winning.html">Oscar Winners</a></li>
-        </ul>
-    </nav>
-
-    <!-- ✅ Search Bar (Centered) -->
+    <!-- ✅ Search Bar -->
     <div class="search-container">
-        <input type="text" id="search" placeholder="Search..." onkeyup="searchPosts()">
-        <button class="search-btn" onclick="searchPosts()">🔍</button>
+        <input type="text" id="search" placeholder="Search blog posts..." onkeyup="searchPosts()">
     </div>
 
-    <!-- ✅ Logo (Right) -->
-    <div class="logo">🎬 <span class="short-logo">CVSL</span></div>
-</header>
-
-<main>
-    <section class="intro">
-        <h2>Welcome to CineVerse Story Lab</h2>
-        <p>Your ultimate guide to the art of filmmaking, scriptwriting, cinematography, and more.</p>
-    </section>
-
-    <!-- ✅ Blog Section (Searchable) -->
-    <section class="blog">
+    <!-- ✅ Blog Posts Section -->
+    <main>
         <article>
-            <h3>Mastering Cinematography</h3>
-            <p>Learn about shot composition, lighting, and storytelling.</p>
+            <h3>Understanding Cinematic Angles</h3>
+            <p>Cinematic angles play a key role in visual storytelling...</p>
         </article>
-
         <article>
-            <h3>Scriptwriting Essentials</h3>
-            <p>Understand the three-act structure and how to create compelling characters.</p>
+            <h3>The Art of Scriptwriting</h3>
+            <p>Scriptwriting is the backbone of filmmaking...</p>
         </article>
-
         <article>
-            <h3>Director’s Vision</h3>
-            <p>How directors shape movies through unique storytelling techniques.</p>
+            <h3>Mastering Film Editing Techniques</h3>
+            <p>Editing is where a film truly comes to life...</p>
         </article>
-    </section>
-</main>
+    </main>
 
-<footer>
-    <p>© 2025 CineVerse Story Lab | All Rights Reserved</p>
-</footer>
-
-<script src="script.js"></script>
+    <!-- ✅ JavaScript File -->
+    <script src="script.js"></script>
 </body>
 </html>
