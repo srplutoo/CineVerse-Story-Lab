@@ -1,29 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
-    <link rel="stylesheet" href="../style.css">
-</head>
-<body>
+// TOGGLE MENU
+function toggleMenu() {
+    document.getElementById('menu').classList.toggle('active');
+}
 
-    <header>
-        <a href="../index.html" class="back-button">← Home</a>
-        <h1>Blog</h1>
-    </header>
+// SEARCH FUNCTION
+function searchContent() {
+    let query = document.getElementById("searchBar").value.toLowerCase();
+    let pages = {
+        "cinematography": "pages/cinematography.html",
+        "scriptwriting": "pages/scriptwriting.html",
+        "direction": "pages/direction.html",
+        "editing": "pages/editing.html",
+        "movies": "pages/movies.html"
+    };
 
-    <main>
-        <article>
-            <h2>Mastering Cinematography</h2>
-            <p>Discover the secrets behind cinematic visuals and perfect lighting...</p>
-        </article>
+    for (let key in pages) {
+        if (key.includes(query)) {
+            window.location.href = pages[key];
+            return;
+        }
+    }
+    alert("No match found!");
+}
 
-        <article>
-            <h2>Secrets of Scriptwriting</h2>
-            <p>How to write engaging stories and create unforgettable characters...</p>
-        </article>
-    </main>
+// BLOG FUNCTIONALITY
+let blogs = [
+    { title: "The Art of Cinematography", content: "A deep dive into lighting and camera work." },
+    { title: "Scriptwriting Tips", content: "How to craft compelling stories." }
+];
 
-</body>
-</html>
+function displayBlogs() {
+    let blogContainer = document.getElementById("blog-container");
+    blogContainer.innerHTML = "";
+    blogs.forEach((blog, index) => {
+        let post = document.createElement("div");
+        post.classList.add("blog-post");
+        post.innerHTML = `<h3>${blog.title}</h3><p>${blog.content}</p>`;
+        blogContainer.appendChild(post);
+    });
+}
+
+function addNewBlog() {
+    let title = prompt("Enter blog title:");
+    let content = prompt("Enter blog content:");
+    if (title && content) {
+        blogs.push({ title, content });
+        displayBlogs();
+    }
+}
+
+window.onload = displayBlogs;
