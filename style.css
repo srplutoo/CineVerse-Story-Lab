@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -13,9 +14,16 @@ header {
     text-align: center;
 }
 
+/* ✅ Navigation Styles */
+nav {
+    background: #222;
+    padding: 10px 0;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
     display: flex;
     justify-content: center;
 }
@@ -28,8 +36,10 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    padding: 10px;
 }
 
+/* ✅ Categories Section */
 .categories {
     text-align: center;
     padding: 20px;
@@ -50,6 +60,7 @@ nav ul li a {
     background-color: #bbb;
 }
 
+/* ✅ Footer */
 footer {
     background: #222;
     color: white;
@@ -57,23 +68,57 @@ footer {
     padding: 10px;
     margin-top: 20px;
 }
-/* ✅ Make Blog Page Mobile-Friendly */
+
+/* ✅ Mobile-Friendly Navigation */
 @media (max-width: 768px) {
+    /* Make text readable on small screens */
     body {
         font-size: 16px;
     }
 
+    /* ✅ Hamburger Menu */
+    .menu-toggle {
+        display: block;
+        background: #333;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    /* ✅ Hide the menu by default on small screens */
     nav ul {
-        display: flex;
+        display: none;
         flex-direction: column;
-        align-items: center;
+        width: 100%;
+        background: #222;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1000;
         padding: 0;
     }
 
     nav ul li {
-        margin: 10px 0;
+        text-align: center;
+        width: 100%;
+        padding: 10px;
     }
 
+    nav ul li a {
+        display: block;
+        padding: 10px;
+        width: 100%;
+    }
+
+    /* Show menu when toggled */
+    nav ul.show {
+        display: flex;
+    }
+}
+
+/* ✅ Blog Page Mobile-Friendly */
+@media (max-width: 768px) {
     .container {
         width: 90%;
         margin: auto;
@@ -88,4 +133,3 @@ footer {
         margin-bottom: 20px;
     }
 }
-
