@@ -1,119 +1,58 @@
-/* ✅ Reset Default Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineVerse Story Lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-/* ✅ General Styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-}
+<header>
+    <!-- ✅ Menu Button (Left) -->
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
-/* ✅ Header (Navbar) */
-header {
-    background: white;
-    color: black;
-    padding: 15px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 2px solid #ddd;
-}
+    <!-- ✅ Navigation Menu (Centered) -->
+    <nav>
+        <ul id="menu">
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="cinematography.html">Cinematography</a></li>
+            <li><a href="direction.html">Direction</a></li>
+            <li><a href="scriptwriting.html">Scriptwriting</a></li>
+            <li><a href="story.html">Story</a></li>
+            <li><a href="editing.html">Editing</a></li>
+            <li><a href="cinema-lighting.html">Cinema Lighting</a></li>
+            <li><a href="oscar-winning.html">Oscar Winners</a></li>
+        </ul>
+    </nav>
 
-/* ✅ Menu Button (Left) */
-.menu-toggle {
-    background: none;
-    border: none;
-    color: black;
-    font-size: 22px;
-    font-weight: bold;
-    cursor: pointer;
-    display: none;
-}
+    <!-- ✅ Search Bar (Centered) -->
+    <div class="search-container">
+        <input type="text" id="search-box" placeholder="Search...">
+        <button class="search-btn">🔍</button>
+    </div>
 
-/* ✅ Navigation Menu (Centered) */
-nav {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
+    <!-- ✅ Logo (Right) -->
+    <div class="logo">🎬 <span class="short-logo">CVSL</span></div>
+</header>
 
-nav ul {
-    list-style: none;
-    display: flex;
-    padding: 0;
-    margin: 0;
-}
+<main>
+    <section class="intro">
+        <h2>Welcome to CineVerse Story Lab</h2>
+        <p>Your ultimate guide to the art of filmmaking, scriptwriting, cinematography, and more.</p>
+    </section>
+</main>
 
-nav ul li {
-    margin: 0 15px;
-}
+<footer>
+    <p>© 2025 CineVerse Story Lab | All Rights Reserved</p>
+</footer>
 
-nav ul li a {
-    text-decoration: none;
-    color: black;
-    font-size: 16px;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #ff4d6d;
-}
-
-/* ✅ Logo (Right) */
-.logo {
-    font-size: 22px;
-    font-weight: bold;
-    color: #ff4d6d;
-    display: flex;
-    align-items: center;
-}
-
-/* ✅ Short Logo */
-.short-logo {
-    font-size: 20px;
-    font-weight: bold;
-    color: black;
-}
-
-/* ✅ Mobile-Friendly Menu */
-@media (max-width: 768px) {
-    /* Make header more compact */
-    header {
-        flex-direction: row;
-        justify-content: space-between;
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById("menu");
+        menu.classList.toggle("show");
     }
+</script>
 
-    /* Show Menu Button */
-    .menu-toggle {
-        display: block;
-    }
-
-    /* Hide menu by default */
-    nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: white;
-        border-top: 2px solid #ddd;
-        text-align: center;
-        padding: 10px 0;
-    }
-
-    /* Show menu when toggled */
-    nav ul.show {
-        display: flex;
-    }
-
-    nav ul li {
-        width: 100%;
-        padding: 10px 0;
-    }
-}
+</body>
+</html>
