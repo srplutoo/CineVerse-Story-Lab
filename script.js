@@ -1,3 +1,8 @@
+function toggleMenu() {
+    let menu = document.getElementById("menu");
+    menu.classList.toggle("show");
+}
+
 function searchPosts() {
     let input = document.getElementById("search").value.toLowerCase();
     let articles = document.querySelectorAll(".blog article");
