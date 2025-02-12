@@ -9,31 +9,31 @@
 <body>
 
 <header>
-    <!-- ✅ Menu Button (Left) -->
+    <!-- ✅ Menu Button -->
     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
-    <!-- ✅ Navigation Menu -->
-    <nav>
-        <ul id="menu">
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="cinematography.html">Cinematography</a></li>
-            <li><a href="direction.html">Direction</a></li>
-            <li><a href="scriptwriting.html">Scriptwriting</a></li>
-            <li><a href="story.html">Story</a></li>
-            <li><a href="editing.html">Editing</a></li>
-            <li><a href="cinema-lighting.html">Cinema Lighting</a></li>
-            <li><a href="oscar-winning.html">Oscar Winners</a></li>
-        </ul>
-    </nav>
+    <!-- ✅ Logo -->
+    <div class="logo">🎬 <span class="short-logo">CVSL</span></div>
 
-    <!-- ✅ Search Bar (Centered) -->
+    <!-- ✅ Search Bar -->
     <div class="search-container">
         <input type="text" id="search-box" placeholder="Search...">
         <button class="search-btn">🔍</button>
     </div>
 
-    <!-- ✅ Logo (Right) -->
-    <div class="logo">🎬 <span class="short-logo">CVSL</span></div>
+    <!-- ✅ Navigation Menu -->
+    <nav>
+        <ul id="menu">
+            <li><a href="blog.html" onclick="closeMenu()">Blog</a></li>
+            <li><a href="cinematography.html" onclick="closeMenu()">Cinematography</a></li>
+            <li><a href="direction.html" onclick="closeMenu()">Direction</a></li>
+            <li><a href="scriptwriting.html" onclick="closeMenu()">Scriptwriting</a></li>
+            <li><a href="story.html" onclick="closeMenu()">Story</a></li>
+            <li><a href="editing.html" onclick="closeMenu()">Editing</a></li>
+            <li><a href="cinema-lighting.html" onclick="closeMenu()">Cinema Lighting</a></li>
+            <li><a href="oscar-winning.html" onclick="closeMenu()">Oscar Winners</a></li>
+        </ul>
+    </nav>
 </header>
 
 <main>
@@ -51,6 +51,11 @@
     function toggleMenu() {
         var menu = document.getElementById("menu");
         menu.classList.toggle("show");
+    }
+
+    function closeMenu() {
+        var menu = document.getElementById("menu");
+        menu.classList.remove("show");
     }
 </script>
 
