@@ -32,7 +32,7 @@ let blogs = [
 function displayBlogs() {
     let blogContainer = document.getElementById("blog-container");
     blogContainer.innerHTML = "";
-    blogs.forEach((blog, index) => {
+    blogs.forEach((blog) => {
         let post = document.createElement("div");
         post.classList.add("blog-post");
         post.innerHTML = `<h3>${blog.title}</h3><p>${blog.content}</p>`;
